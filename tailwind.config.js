@@ -9,7 +9,11 @@ module.exports = {
     "./app.vue",
   ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        homefix: 'url("assets/images/paintingladder.jpg")',
+      },
+    },
   },
   plugins: [],
 };
