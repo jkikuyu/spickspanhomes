@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-slate-50 dark:bg-black dark:text-white">
+  <div class="min-h-screen bg-white dark:bg-black dark:text-white">
     <main class="max-w-4xl mx-auto">
       <section
         id="hero"
@@ -9,6 +9,9 @@
         consequuntur itaque quaerat autem quibusdam, aperiam eum aliquam hic non
         in magnam esse voluptate corrupti nesciunt adipisci expedita, mollitia
         explicabo.
+      </section>
+      <section id="servicecards" class="grid grid-cols-4">
+        <service-card />
       </section>
     </main>
   </div>

@@ -1,11 +1,7 @@
 <template>
   <div
-    class="relative overflow-hidden bg-cover bg-no-repeat"
-    style="
-      background-position: 50%;
-      background-image: url('https://tecdn.b-cdn.net/img/new/slides/146.webp');
-      height: 350px;
-    "
+    class="relative overflow-hidden bg-cover bg-no-repeat bg-homefix"
+    style="background-position: 50%; height: 500px"
   >
     <div
       class="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-fixed"
