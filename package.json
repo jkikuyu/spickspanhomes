@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@pinia/nuxt": "^0.4.11",
+    "pinia": "^2.1.6",
     "tw-elements": "^1.0.0"
   }
 }
