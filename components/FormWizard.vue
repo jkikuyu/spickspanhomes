@@ -21,7 +21,7 @@
       </div>
     </template>
     <template #footer>
-      <button class="btn btn-primary" type="submit">Get OTP</button>
+      <button class="btn btn-primary" type="submit">Submit</button>
     </template>
   </multi-step-form>
 </template>
