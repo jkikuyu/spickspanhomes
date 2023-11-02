@@ -15,7 +15,7 @@
       <button
         @click="$generalStore.isFormWizardOpen = true"
         type="button"
-        class="mt-9 mb-2 ml-10 inline-block bottom-0 rounded border-2 px-6 pb-[6px] pt-2 font-medium uppercase leading-normal border-neutral-400 text-neutral-800 transition duration-150 ease-in-out hover:bg-neutral-800 hover:bg-opacity-10 focus:outline-none focus:ring-0 dark:bg-neutral-400 dark:hover:bg-neutral-100"
+        class="mt-9 mb-2 ml-10 inline-block bottom-0 rounded border-2 px-6 pb-[6px] pt-2 font-medium uppercase leading-normal border-neutral-400 text-neutral-800 transition duration-150 ease-in-out hover:bg-neutral-400 hover:bg-opacity-10 focus:outline-none focus:ring-0 dark:bg-neutral-400 dark:hover:bg-neutral-100"
         data-te-ripple-init
         data-te-ripple-color="light"
       >
