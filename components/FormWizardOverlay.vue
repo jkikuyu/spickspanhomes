@@ -33,21 +33,36 @@
       <div class="p-4">
         <form-wizard v-if="isNextStep" />
       </div>
-      <div
-        class="absolute flex items-center justify-center left-0 bottom-0 mb-6 w-full rounded px-6 pb-[6px]"
+      <!--       <div
+        class="absolute inline-flex items-center justify-center left-0 bottom-0 mb-6 w-full rounded px-6 pb-[6px]"
       >
         <button
+          v-if="isPrevStep"
+          @click="prevStep"
+          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-l"
+        >
+          <span>Prev</span>
+        </button> -->
+      <!--         <button
           @click="isNextStep = !isNextStep"
-          class="rounded px-4 py-2 pb-[6px] bg-neutral-800"
+          class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded-r"
         >
           <span v-if="isNextStep">Next</span>
         </button>
-      </div>
+      </div> -->
     </div>
   </div>
 </template>
 
 <script setup>
-const { $generalStore } = useNuxtApp();
+/* const { $generalStore, $serviceStore } = useNuxtApp();
 let isNextStep = ref(true);
+let isPrevStep = ref(false);
+const prevStep = () => {};
+const nextStep = () => {}; */
+try {
+  await $serviceStore.getServiceList();
+} catch (error) {
+  console.log(error);
+}
 </script>
