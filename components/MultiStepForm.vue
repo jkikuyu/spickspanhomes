@@ -2,36 +2,52 @@
   <div>
     <!-- <template #[dynamicSlotName]> -->
     <div>
+      <slot :name="$serviceStore.stepId" :ask="askQ" />
+    </div>
+
+    <div v-for="child in children" :key="child.id">
       <slot
-        v-if="selected == 0"
-        :name="`ask_${$serviceStore.id}`"
-        :ask="$serviceStore.ask"
+        :name="`option_${activeStepIndex}`"
+        :desc="child.desc"
+        :value="child.id"
+        :findService="findService"
       />
-    </div>
-    <div v-for="service in services" :key="service.id">
-      <slot :name="`option_${$serviceStore.id}`" :desc="service.desc" />
-    </div>
-    <div v-if="selected == 2" v-for="service in services" :key="service.id">
-      <slot :name="`option_${$serviceStore.id}`" :desc="service.desc"></slot>
     </div>
   </div>
 </template>
 
 <script setup>
 import { storeToRefs } from "pinia";
+import { useServiceStore } from "~/stores/service";
 const { $serviceStore, $generalStore } = useNuxtApp();
-let { services } = storeToRefs($serviceStore);
-let selected = ref(0);
-let activeStepIndex = ref(0);
+
+let services = reactive([]);
+let children = reactive([]);
+let activeStepIndex = ref(1);
+services = $serviceStore.services;
+children = services.children;
+
 function submitStep() {
   activeStepIndex.value++;
 }
-watch(
-  () => selected.value,
-  () => {
-    if (selected.value) {
-      services = $serviceStore.findService(services, selected.value);
-    }
+const askQ = computed(() => {
+  if ($serviceStore.stepId) {
+    console.log("computed-", services.ask);
+    return services.ask;
   }
-);
+});
+
+const findService = (id) => {
+  if (id) {
+    submitStep();
+    services = $serviceStore.findService(id, children);
+    $serviceStore.stepId = "ask_" + activeStepIndex.value;
+    $serviceStore.optionId = "option_" + activeStepIndex.value;
+
+    console.log($serviceStore.stepId);
+    children = services.children;
+    console.log("services", services.ask);
+    askQ;
+  }
+};
 </script>
