@@ -154,7 +154,7 @@
             <div class="mb-6 md:mr-auto">
               <button
                 type="submit"
-                class="inline-block rounded border-2 font-medium text-sm uppercase leading-normal border-neutral-800 text-neutral-800 px-6 pb-[6px] pt-2 transition duration-150 ease-in-out hover:bg-neutral-600 hover:bg-opacity-10 focus:outline-none focus:ring-0 dark:bg-neutral-200 dark:hover:bg-neutral-100"
+                class="inline-block rounded border-2 font-medium text-sm uppercase leading-normal border-neutral-400 text-neutral-800 px-6 pb-[6px] pt-2 transition duration-150 ease-in-out hover:bg-neutral-600 hover:bg-opacity-10 focus:outline-none focus:ring-0 dark:bg-neutral-200 dark:hover:bg-neutral-100"
               >
                 <!-- border-gray-800 px-6 pb-[6px] pt-2 text-xs font-medium uppercase leading-normal text-gray-800 transition duration-150 ease-in-out hover:border-neutral-200 hover:bg-neutral-500 hover:bg-opacity-10 hover:text-neutral-200 focus:border-neutral-200 focus:text-neutral-200 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200 dark:hover:bg-neutral-200 dark:hover:bg-opacity-10 dark:border-gray-300 dark:text-gray-300 -->
                 Subscribe
